@@ -4,12 +4,12 @@ import Document, { Head, Main, NextScript } from 'next/document'
 import Manifest from 'next-manifest/manifest'
 
 export default class MyDocument extends Document {
-  static async getInitialProps(ctx) {
+  static async getInitialProps (ctx) {
     const initialProps = await Document.getInitialProps(ctx)
     return { ...initialProps }
   }
 
-  render() {
+  render () {
     return (
       <html amp=''>
         <Head>

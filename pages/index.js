@@ -1,7 +1,6 @@
 import React from 'react'
 
 export default class Index extends React.Component {
-
   componentDidMount () {
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker

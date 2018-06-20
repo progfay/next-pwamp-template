@@ -13,8 +13,7 @@ app.prepare().then(() => {
   createServer((req, res) => {
     if (req.url.endsWith('/sw.js')) {
       app.serveStatic(req, res, join(root, `./static/workbox/${req.url}`))
-    }
-    else if (req.url.startsWith('/static/workbox/')) {
+    } else if (req.url.startsWith('/static/workbox/')) {
       app.serveStatic(req, res, join(root, `.${req.url}`))
     } else {
       handle(req, res, req.url)
