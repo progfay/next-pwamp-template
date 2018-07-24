@@ -4,7 +4,7 @@ export default class Index extends React.Component {
   componentDidMount () {
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker
-        .register('/sw.js')
+        .register('/static/workbox/sw.js')
         .then(registration => {
           console.log('service worker registration successful')
         })
